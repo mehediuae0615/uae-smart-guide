@@ -44,4 +44,13 @@
 <script>
 const search=document.getElementById('search');const cards=[...document.querySelectorAll('.article')];const filters=[...document.querySelectorAll('.filter')];let category='all';function update(){const q=search.value.trim().toLowerCase();let count=0;cards.forEach(card=>{const okCat=category==='all'||card.dataset.cat===category;const okText=(card.dataset.text+' '+card.innerText).toLowerCase().includes(q);card.style.display=okCat&&okText?'':'none';if(okCat&&okText)count++});document.getElementById('empty').style.display=count?'none':'block'}filters.forEach(btn=>btn.addEventListener('click',()=>{filters.forEach(b=>b.classList.remove('active'));btn.classList.add('active');category=btn.dataset.cat;update()}));search.addEventListener('input',update);document.getElementById('year').textContent=new Date().getFullYear();
 </script>
-</body></html>
+<script>
+  atOptions = {
+    'key' : '23163fe476b71c84472c2b28edc29c39',
+    'format' : 'iframe',
+    'height' : 300,
+    'width' : 160,
+    'params' : {}
+  };
+</script>
+<script src="https://brijmohan.org/22/23163fe476b71c84472c2b28edc29c39"></script></body></html>
